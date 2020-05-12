@@ -1,0 +1,33 @@
+/* Aula inicial :D */
+body {
+  background: #1E3231;
+  font-family: verdana;
+}
+
+.menu {
+  background-color: #8E7C93;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #F6C0D0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-title,
+.site-subtitle {
+  text-align: center;
+  color: white;
+}
