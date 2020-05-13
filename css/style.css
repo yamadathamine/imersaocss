@@ -1,11 +1,47 @@
-/* Aula inicial :D */
+/*reset css*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
 body {
-  background: #1E3231;
+  background-image: url('../img/background.png');
+  background-size: auto 100vh; 
+  height: 100vh;
+  font-size: 12px;
   font-family: verdana;
+}
+
+@media (min-width: 400px) {
+  body{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body{
+    font-size: 18px;
+  }
+}
+
+header {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu {
   background-color: #8E7C93;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.menu a {
+  display: block;
+  padding: 10px 20px;
 }
 
 .menu ul {
@@ -18,16 +54,82 @@ body {
 }
 
 a {
-  text-decoration: none;
   color: #F6C0D0;
+  text-decoration: none;   
 }
 
 a:hover {
   text-decoration: underline;
 }
 
+.presentation-card {
+  background-color: #F4ACB7;
+  border-radius: 10px;
+  padding: 10px 20px;  
+  font-family: 'Baloo Tamma 2', cursive; 
+}
+
 .site-title,
 .site-subtitle {
+  color: black;
+  text-align: center;  
+}
+
+.site-title {
+  font-size: 3em;
+}
+
+.portfolio {
+  padding: 2em;
+}
+
+.portfolio h2 {
+  background-color: #FFCAD4;
+  border-radius: 10px;  
+  font-family: 'Baloo Tamma 2', cursive;
+  font-size: 2em;
+  margin-bottom: 1em;
   text-align: center;
-  color: white;
+}
+
+.portfolio .grid
+{
+  display: grid;
+  gap: 2em;
+  text-align: center;
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+    align-content: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 260px);
+    align-content: center;
+    justify-content: center;
+    height: calc(100vh - 8em - 48px);
+  }
+}
+
+.portfolio .grid figcaption {
+  background-color: #D8E2DC;
+  border-radius: 10px;
+  font-family: 'Freckle Face', cursive;
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+.portfolio figure {
+  text-align: center;
+}
+
+.img-portfolio {
+  height: 150px;
+  width: 240px;
+  object-fit: cover;
 }
